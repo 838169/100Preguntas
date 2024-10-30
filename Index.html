@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Romántico</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="/logo.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div class="container">
+
+        <h1 class="margin">100 Preguntas para mi <br> 
+            <span class="title"></span><span class="emoji">💕</span>
+        </h1>
+        <form class="margin">
+            <ul>
+                <li>
+                    <a><span>1.</span> ¿Cuál es mi color favorito? 🎨</a>
+                    <input type="text" name="respuesta1" id="respuesta1">
+                </li>
+                <li>
+                    <a><span>2.</span>¿Qué cambiarías de tí por mí? 🥺</a>
+                    <input type="text" name="respuesta2" id="respuesta2">
+                </li>
+                <li>
+                    <a><span>3.</span> ¿Cuál es mi comida favorita?</a>
+                    <input type="text" name="respuesta3" id="respuesta3">
+                </li>
+                <li>
+                    <a><span>4.</span> ¿Cuál es tu mayor inseguridad que tienes sobre nuestra relación? 😶</a>
+                    <input type="text" name="respuesta4" id="respuesta4">
+                </li>
+                <li>
+                    <a><span>5.</span> ¿Cuál es mi hobby favorito?</a>
+                    <input type="text" name="respuesta5" id="respuesta5">
+                </li>
+                <li>
+                    <a><span>6.</span> ¿Cuál es mi película favorita? 🍿</a>
+                    <input type="text" name="respuesta6" id="respuesta6">
+                </li>
+                <li>
+                    <a><span>7.</span> ¿Cuál es mi serie favorita? 🎞️</a>
+                    <input type="text" name="respuesta7" id="respuesta7">
+                </li>
+                <li>
+                    <a><span>8.</span> ¿Qué cosas de mí te encantan? 🥰</a>
+                    <input type="text" name="respuesta8" id="respuesta8">
+                </li>
+                <li>
+                    <a><span>9.</span> ¿Cuál fue el día más triste que yo te haya dado? 😔</a>
+                    <input type="text" name="respuesta9" id="respuesta9">
+                </li>
+                <li>
+                    <a><span>10.</span> ¿Cuál es mi viaje soñado? ✈️</a>
+                    <input type="text" name="respuesta10" id="respuesta10">
+                </li>
+                <li>
+                    <a><span>11.</span> ¿Cómo sería para ti un día perfecto? 🌤️</a>
+                    <input type="text" name="respuesta11" id="respuesta11">
+                </li>
+                <li>
+                    <a><span>12.</span> ¿Qué fantasía te gustaría que cumpliera para ti? 😏</a>
+                    <input type="text" name="respuesta12" id="respuesta12">
+                </li>
+                <li>
+                    <a><span>13.</span> Si tuvieras un hijo, ¿Cómo le llamarías? 👶🏻</a>
+                    <input type="text" name="respuesta13" id="respuesta13">
+                </li>
+                <li>
+                    <a><span>14.</span> ¿Qué pedirías si te diera tres deseos?</a>
+                    <input type="text" name="respuesta14" id="respuesta14">
+                </li>
+                <li>
+                    <a><span>15.</span> ¿Qué es lo que más valoras como pareja?</a>
+                    <input type="text" name="respuesta15" id="respuesta15">
+                </li>
+                <li>
+                    <a><span>16.</span> ¿Qué es lo que menos te gusta de mí? 🫠</a>
+                    <input type="text" name="respuesta16" id="respuesta16">
+                </li>
+                <li>
+                    <a><span>17.</span> ¿Cuál es mi tipo de música favorita? 🎧</a>
+                    <input type="text" name="respuesta17" id="respuesta17">
+                </li>
+                <li>
+                    <a><span>18.</span> ¿Quiénes son las personas más importantes de tu vida?</a>
+                    <input type="text" name="respuesta18" id="respuesta18">
+                </li>
+                <li>
+                    <a><span>19.</span> ¿Cuáles son mis meses favoritos?</a>
+                    <input type="text" name="respuesta19" id="respuesta19">
+                </li>
+                <li>
+                    <a><span>20.</span> ¿Cual crees que es uno de mis recuerdos favoritos que tengo sobre ti? 🤔</a>
+                    <input type="text" name="respuesta20" id="respuesta20">
+                </li>
+                <li>
+                    <a><span>21.</span> ¿Cuál es tú recuerdo favorito que tienes conmigo?</a>
+                    <input type="text" name="respuesta21" id="respuesta21">
+                </li>
+                <li>
+                    <a><span>22.</span> ¿Qué es lo que más te gusta de nuestra relación?</a>
+                    <input type="text" name="respuesta22" id="respuesta22">
+                </li>
+                <li>
+                    <a><span>23.</span> ¿Cuál crees que es nuestra mayor fortaleza como pareja? 🤗</a>
+                    <input type="text" name="respuesta23" id="respuesta23">
+                </li>
+                <li>
+                    <a><span>24.</span> ¿Hay algo en nuestra relación que te gustaría cambiar? 😳</a>
+                    <input type="text" name="respuesta24" id="respuesta24">
+                </li>
+                <li>
+                    <a><span>25.</span> ¿Qué crees que podemos hacer para mejorar nuestra comunicación?</a>
+                    <input type="text" name="respuesta25" id="respuesta25">
+                </li>
+                <li>
+                    <a><span>26.</span> ¿Cómo te imaginas nuestra relación dentro de cinco años? 👫🏻</a>
+                    <input type="text" name="respuesta26" id="respuesta26">
+                </li>
+                <li>
+                    <a><span>27.</span> ¿Qué te hace sentir más feliz cuando estamos juntos?</a>
+                    <input type="text" name="respuesta27" id="respuesta27">
+                </li>
+                <li>
+                    <a><span>28.</span> ¿Hay alguna situación difícil por la que hayamos pasado que sientas que nos haya unido más?</a>
+                    <input type="text" name="respuesta28" id="respuesta28">
+                </li>
+                <li>
+                    <a><span>29.</span> ¿Qué valoras más en nuestra relación?</a>
+                    <input type="text" name="respuesta29" id="respuesta29">
+                </li>
+                <li>
+                    <a><span>30.</span> ¿Hay algo que sientas que aún no hemos explorado juntos y te gustaría intentarlo?</a>
+                    <input type="text" name="respuesta30" id="respuesta30">
+                </li>
+                <li>
+                    <a><span>31.</span> ¿Cómo te sientes acerca de la forma en que manejamos los conflictos en nuestra relación?</a>
+                    <input type="text" name="respuesta31" id="respuesta31">
+                </li>
+                <li>
+                    <a><span>32.</span> ¿Hay alguna actividad que te gustaría hacer más juntos como pareja?</a>
+                    <input type="text" name="respuesta32" id="respuesta32">
+                </li>
+                <li>
+                    <a><span>33.</span> ¿Cuál es mi palabra favorita?</a>
+                    <input type="text" name="respuesta33" id="respuesta33">
+                </li>
+                <li>
+                    <a><span>34.</span> ¿Cuál es mi apodo favorito?</a>
+                    <input type="text" name="respuesta34" id="respuesta34">
+                </li>
+                <li>
+                    <a><span>35.</span> ¿Cuál es mi nombre que casi no me gusta?</a>
+                    <input type="text" name="respuesta35" id="respuesta35">
+                </li>
+                <li>
+                    <a><span>36.</span> ¿Cuál es mi destino de vacaciones favorito?</a>
+                    <input type="text" name="respuesta36" id="respuesta36">
+                </li>
+                <li>
+                    <a><span>37.</span> ¿Qué es lo que más te emociona del futuro de nuestra relación?</a>
+                    <input type="text" name="respuesta37" id="respuesta37">
+                </li>
+                <li>
+                    <a><span>38.</span> ¿Cómo sabes que estás enamorada?</a>
+                    <input type="text" name="respuesta38" id="respuesta38">
+                </li>
+                <li>
+                    <a><span>39.</span> ¿Qué es lo que más te atrajo de mí cuando nos conocimos? (A mi se me hace que nada 😒)</a>
+                    <input type="text" name="respuesta39" id="respuesta39">
+                </li>
+                <li>
+                    <a><span>40.</span> ¿Me ves como una prioridad en tu vida?</a>
+                    <input type="text" name="respuesta40" id="respuesta40">
+                </li>
+                <li>
+                    <a><span>41.</span> ¿Qué es lo que más te gusta de mi personalidad?</a>
+                    <input type="text" name="respuesta41" id="respuesta41">
+                </li>
+                <li>
+                    <a><span>42.</span> ¿Hay algún momento específico en el que te hayas dado cuenta de que me amas?</a>
+                    <input type="text" name="respuesta42" id="respuesta42">
+                </li>
+                <li>
+                    <a><span>43.</span> ¿Cómo te sientes cuando pasamos tiempo juntos?</a>
+                    <input type="text" name="respuesta43" id="respuesta43">
+                </li>
+                <li>
+                    <a><span>44.</span> ¿Te has imaginado alguna vez un futuro juntos?</a>
+                    <input type="text" name="respuesta44" id="respuesta44">
+                </li>
+                <li>
+                    <a><span>45.</span> ¿Cómo crees que nuestro amor ha crecido desde que comenzamos a salir?</a>
+                    <input type="text" name="respuesta45" id="respuesta45">
+                </li>
+                <li>
+                    <a><span>46.</span> ¿Cuál es mi forma favorita de comunicarme?</a>
+                    <input type="text" name="respuesta46" id="respuesta46">
+                </li>
+                <li>
+                    <a><span>47.</span> ¿Te sientes segura en nuestra relación?</a>
+                    <input type="text" name="respuesta47" id="respuesta47">
+                </li>
+                <li>
+                    <a><span>48.</span> ¿Cuál es mi forma favorita de meditación?</a>
+                    <input type="text" name="respuesta48" id="respuesta48">
+                </li>
+                <li>
+                    <a><span>49.</span> Dependiendo tus respuestas anteriores ¿Te gustaría pasar el resto de tu vida conmigo?</a>
+                    <input type="text" name="respuesta49" id="respuesta49">
+                </li>
+                <li>
+                    <a><span>50.</span> ¿Qué es lo que más te gusta de nuestras conversaciones?</a>
+                    <input type="text" name="respuesta50" id="respuesta50">
+                </li>
+                <li>
+                    <a><span>51.</span> ¿Cómo te sientes cuando compartimos momentos íntimos juntos?</a>
+                    <input type="text" name="respuesta51" id="respuesta51">
+                </li>
+                <li>
+                    <a><span>52.</span> ¿Te gustaría tener hijos conmigo?</a>
+                    <input type="text" name="respuesta52" id="respuesta52">
+                </li>
+                <li>
+                    <a><span>53.</span> ¿Cómo te sientes cuando estamos separados por un tiempo?</a>
+                    <input type="text" name="respuesta53" id="respuesta53">
+                </li>
+                <li>
+                    <a><span>54.</span> ¿Cuál es mi Video-Juego favorito?</a>
+                    <input type="text" name="respuesta54" id="respuesta54">
+                </li>
+                <li>
+                    <a><span>55.</span> ¿Qué aspectos de nuestra relación te hacen sentir más segura y amada?</a>
+                    <input type="text" name="respuesta55" id="respuesta55">
+                </li>
+                <li>
+                    <a><span>56.</span> ¿Cómo te sientes en general en este momento?</a>
+                    <input type="text" name="respuesta56" id="respuesta56">
+                </li>
+                <li>
+                    <a><span>57.</span> ¿Hay algo que te preocupe o te cause ansiedad en nuestra relación?</a>
+                    <input type="text" name="respuesta57" id="respuesta57">
+                </li>
+                <li>
+                    <a><span>58.</span> ¿Qué cosas pequeñas hacen que te sientas amada y valorada?</a>
+                    <input type="text" name="respuesta58" id="respuesta58">
+                </li>
+                <li>
+                    <a><span>59.</span> ¿Hay algo que te gustaría que supiera sobre tus emociones?</a>
+                    <input type="text" name="respuesta59" id="respuesta59">
+                </li>
+                <li>
+                    <a><span>60.</span> ¿Cómo puedo apoyarte mejor en tus momentos difíciles?</a>
+                    <input type="text" name="respuesta60" id="respuesta60">
+                </li>
+                <li>
+                    <a><span>61.</span> ¿Qué sueños o metas te gustaría que te apoyara a alcanzar?</a>
+                    <input type="text" name="respuesta61" id="respuesta61">
+                </li>
+                <li>
+                    <a><span>62.</span> ¿Te sientes cómoda expresando tus sentimientos conmigo?</a>
+                    <input type="text" name="respuesta62" id="respuesta62">
+                </li>
+                <li>
+                    <a><span>63.</span> ¿Hay algo que te gustaría que hiciera o dijera para que te sintieras más escuchada?</a>
+                    <input type="text" name="respuesta63" id="respuesta63">
+                </li>
+                <li>
+                    <a><span>64.</span> ¿Qué es lo más importante que debería saber sobre cómo te comunicas?</a>
+                    <input type="text" name="respuesta64" id="respuesta64">
+                </li>
+                <li>
+                    <a><span>65.</span> ¿Cuáles son tus sueños o aspiraciones profesionales? OJO CON ESE PLAN C 🤨</a>
+                    <input type="text" name="respuesta65" id="respuesta65">
+                </li>
+                <li>
+                    <a><span>66.</span> ¿Cómo podemos apoyarnos mutuamente en nuestras metas individuales y como pareja?</a>
+                    <input type="text" name="respuesta66" id="respuesta66">
+                </li>
+                <li>
+                    <a><span>67.</span> ¿Hay algún hábito o rutina que te gustaría que adoptáramos juntos?</a>
+                    <input type="text" name="respuesta67" id="respuesta67">
+                </li>
+                <li>
+                    <a><span>68.</span> ¿Cómo prefieres pasar un día libre?</a>
+                    <input type="text" name="respuesta68" id="respuesta68">
+                </li>
+                <li>
+                    <a><span>69.</span> ¿Qué actividades te hacen sentir más conectada conmigo?</a>
+                    <input type="text" name="respuesta69" id="respuesta69">
+                </li>
+                <li>
+                    <a><span>70.</span> ¿Hay algo que te gustaría intentar juntos, como un nuevo pasatiempo o deporte?</a>
+                    <input type="text" name="respuesta70" id="respuesta70">
+                </li>
+                <li>
+                    <a><span>71.</span> ¿Qué cualidades admiras más en mí?</a>
+                    <input type="text" name="respuesta71" id="respuesta71">
+                </li>
+                <li>
+                    <a><span>72.</span> ¿Has aprendido algo dentro de nuestra relación? Si es así, justifica</a>
+                    <input type="text" name="respuesta72" id="respuesta72">
+                </li>
+                <li>
+                    <a><span>73.</span> ¿Qué es lo más romántico que has experimentado en nuestra relación?</a>
+                    <input type="text" name="respuesta73" id="respuesta73">
+                </li>
+                <li>
+                    <a><span>74.</span> ¿Cómo describirías nuestra amistad dentro de la relación?</a>
+                    <input type="text" name="respuesta74" id="respuesta74">
+                </li>
+                <li>
+                    <a><span>75.</span> ¿Qué amigos o familiares te apoyan más en nuestra relación?</a>
+                    <input type="text" name="respuesta75" id="respuesta75">
+                </li>
+                <li>
+                    <a><span>76.</span> ¿Cómo podemos ser un mejor apoyo el uno para el otro?</a>
+                    <input type="text" name="respuesta76" id="respuesta76">
+                </li>
+                <li>
+                    <a><span>77.</span> ¿Qué cosas haces para cuidar de nuestra relación?</a>
+                    <input type="text" name="respuesta77" id="respuesta77">
+                </li>
+                <li>
+                    <a><span>78.</span> ¿Cómo te gustaría que celebráramos nuestros logros juntos?</a>
+                    <input type="text" name="respuesta78" id="respuesta78">
+                </li>
+                <li>
+                    <a><span>79.</span> ¿Qué te gustaría hacer para divertirnos más juntos?</a>
+                    <input type="text" name="respuesta79" id="respuesta79">
+                </li>
+                <li>
+                    <a><span>80.</span> ¿Hay algo loco o espontáneo que siempre has querido intentar?</a>
+                    <input type="text" name="respuesta80" id="respuesta80">
+                </li>
+                <li>
+                    <a><span>81.</span> ¿Cuál es tu idea de una cita perfecta?</a>
+                    <input type="text" name="respuesta81" id="respuesta81">
+                </li>
+                <li>
+                    <a><span>82.</span> ¿Te gustaría planificar una escapada juntos? ¿A dónde te gustaría ir?</a>
+                    <input type="text" name="respuesta82" id="respuesta82">
+                </li>
+                <li>
+                    <a><span>83.</span> ¿Cómo podemos mantener la chispa en nuestra relación?</a>
+                    <input type="text" name="respuesta83" id="respuesta83">
+                </li>
+                <li>
+                    <a><span>84.</span> Decepciónes de mí, ¿llegarias a tener?</a>
+                    <input type="text" name="respuesta84" id="respuesta84">
+                </li>
+                <li>
+                    <a><span>85.</span> ¿Qué es lo más importante que te gustaría lograr en los próximos años?</a>
+                    <input type="text" name="respuesta85" id="respuesta85">
+                </li>
+                <li>
+                    <a><span>86.</span> ¿Tienes algún sueño que no hayas compartido conmigo?</a>
+                    <input type="text" name="respuesta86" id="respuesta86">
+                </li>
+                <li>
+                    <a><span>87.</span> ¿Cómo defines la felicidad en tu vida?</a>
+                    <input type="text" name="respuesta87" id="respuesta87">
+                </li>
+                <li>
+                    <a><span>88.</span> ¿Qué significa la lealtad para ti en una relación?</a>
+                    <input type="text" name="respuesta88" id="respuesta88">
+                </li>
+                <li>
+                    <a><span>89.</span> ¿Qué piensas sobre el perdón y cómo lo aplicas en tu vida?</a>
+                    <input type="text" name="respuesta89" id="respuesta89">
+                </li>
+                <li>
+                    <a><span>90.</span> ¿Cómo describirías tu relación con tu familia?</a>
+                    <input type="text" name="respuesta90" id="respuesta90">
+                </li>
+                <li>
+                    <a><span>91.</span> ¿Qué crees que nos ha unido más como pareja?</a>
+                    <input type="text" name="respuesta91" id="respuesta91">
+                </li>
+                <li>
+                    <a><span>92.</span> ¿Cómo te sientes respecto a la cantidad de tiempo que pasamos juntos?</a>
+                    <input type="text" name="respuesta92" id="respuesta92">
+                </li>
+                <li>
+                    <a><span>93.</span> ¿Qué gestos románticos te hacen sentir especial?</a>
+                    <input type="text" name="respuesta93" id="respuesta93">
+                </li>
+                <li>
+                    <a><span>94.</span> ¿Qué significa para ti la conexión emocional en una relación?</a>
+                    <input type="text" name="respuesta94" id="respuesta94">
+                </li>
+                <li>
+                    <a><span>95.</span> ¿Cómo puedo apoyarte cuando estás pasando por un mal momento?</a>
+                    <input type="text" name="respuesta95" id="respuesta95">
+                </li>
+                <li>
+                    <a><span>96.</span> ¿Qué te gustaría que hiciera en momentos de tensión entre nosotros?</a>
+                    <input type="text" name="respuesta96" id="respuesta96">
+                </li>
+                <li>
+                    <a><span>97.</span> ¿Cuál es la aventura más loca que te gustaría hacer?</a>
+                    <input type="text" name="respuesta97" id="respuesta97">
+                </li>
+                <li>
+                    <a><span>98.</span> ¿Qué pasatiempos te gustaría que probáramos juntos?</a>
+                    <input type="text" name="respuesta98" id="respuesta98">
+                </li>
+                <li>
+                    <a><span>99.</span> ¿Qué es lo más divertido que hemos hecho juntos?</a>
+                    <input type="text" name="respuesta99" id="respuesta99">
+                </li>
+                <li>
+                    <a><span>100.</span> Mi amor, ¿Cual es tú primer recuerdo especial que tienes conmigo, qué es lo mejor que te ha pasado estando conmigo?</a>
+                    <input type="text" name="respuesta100" id="respuesta100">
+                </li>
+            </ul>
+        </form>
+        <button class="btn margin" id="btn">Enviar formulario</button>        
+    </div>
+    <script src="/Js.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+        publicKey: "Vt34sDSeGMt3RSrEY",
+    });
+    })();
+    </script>
+</body>
+</html>
